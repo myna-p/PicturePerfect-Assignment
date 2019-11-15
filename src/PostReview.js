@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 class PostReview extends Component {
 
-    //To Do: Automate the value of 'movie_id', automate 'user_id' after implementing login functionality 
+    //To Do: Automate the 'user_id' after implementing login functionality 
     constructor(props) {
         super(props)
 
@@ -44,8 +44,6 @@ class PostReview extends Component {
 
     
     componentDidMount() {
-        
-    //        this.state.movie_id = params.movieId ;
         //Setting the review_date state variable to the current system date
         var that = this;
         var date = new Date().getDate(); //Current Date
@@ -60,7 +58,6 @@ class PostReview extends Component {
         review_date:
         year + '-' + month + '-' + date + ' ' + hours + ':' + min + ':' + sec, 
 
-       // movie_id: this.$params.movieId,
         });
       }
   render() {
