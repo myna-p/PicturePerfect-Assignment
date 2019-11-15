@@ -1,11 +1,12 @@
 # PicturePerfect-Assignment
 Clumio Intern Assignment 
 
-1. Frontend - ReactJS
+# Frontend - ReactJS
 
-  cd foldername
-  npm start
+ 1. cd foldername
 
-2. Backend - Go
+ 2. npm start
+
+# Backend - Go
   
-  go run /path/to/goserver-trial.go
+ go run /path/to/goserver-trial.go
