@@ -85,6 +85,7 @@ class Main extends Component {
             
             <Route path="/moviebyid/:movieId" component={MovieByID} />
             <Route path="/postreview" component={PostReview}/> 
+            <Route path="/postreview/:movieId" component={PostReview}/> 
             </switch>
          </div>
         </div>

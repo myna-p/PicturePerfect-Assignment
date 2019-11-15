@@ -7,8 +7,9 @@ class PostReview extends Component {
         super(props)
 
         this.state = {
-            review_id: '', movie_id: '', user_id: '1', review_date: '' ,rating :'', content: '', rows: ['']
+            review_id: '', movie_id: this.props.location.param1 , user_id: '1', review_date: '' ,rating :'', content: '', rows: ['']
         }
+        console.log("about",props.location.aboutProps )
         this.handleInputChange = this.handleInputChange.bind(this);
        
     }
@@ -21,7 +22,6 @@ class PostReview extends Component {
         });
         
     }
-    
     handleSubmit = event => {
         alert("Review uploaded!")
         event.preventDefault();
@@ -42,8 +42,11 @@ class PostReview extends Component {
         window.location = '/#'; //Change to correct location -> /moviebyid/:id
     }
 
-    //Setting the review_date state variable to the current system date
+    
     componentDidMount() {
+        
+    //        this.state.movie_id = params.movieId ;
+        //Setting the review_date state variable to the current system date
         var that = this;
         var date = new Date().getDate(); //Current Date
         var month = new Date().getMonth() + 1; //Current Month
@@ -51,23 +54,27 @@ class PostReview extends Component {
         var hours = new Date().getHours(); //Current Hours
         var min = new Date().getMinutes(); //Current Minutes
         var sec = new Date().getSeconds(); //Current Seconds
-    
+        
         that.setState({
         //Setting the value of the date time
         review_date:
-        year + '-' + month + '-' + date + ' ' + hours + ':' + min + ':' + sec,
+        year + '-' + month + '-' + date + ' ' + hours + ':' + min + ':' + sec, 
+
+       // movie_id: this.$params.movieId,
         });
       }
   render() {
     return (
       <div  align='center' >
         <h1>Submit Review</h1>
+        <h3>Movie Title: {this.props.location.param2}</h3>
         <form onSubmit={this.handleSubmit}>
+            <img src={this.props.location.param3} class='lists' />
                     <table width="50%">
                         <tbody>  
-                        <tr><td>Movie ID</td><td><input type="text" name="movie_id" size="80" onChange={this.handleInputChange} /></td></tr>
+                        
                         <tr><td>Rating</td><td><input type="text" name="rating" size="80" onChange={this.handleInputChange} /></td></tr>
-                        <tr><td>Comments</td><td><input type="text" name="content" size="80" height="100" onChange={this.handleInputChange} /></td></tr>
+                        <tr><td>Comments</td><td><textarea rows="4"  type="text" name="content" size="80" height="100" onChange={this.handleInputChange} /></td></tr>
                         <tr><td colSpan="2" align="center"><button class='form1' type="submit">Add Review</button></td></tr>
                         </tbody>
                     </table>
@@ -81,4 +88,5 @@ export default PostReview;
 
 /*Add User ID to each of the reviews after implementing login
 <tr><td>user_id</td><td><input type="text" name="user_id" size="80"  onChange={this.handleInputChange} /></td></tr>
+<tr><td>Movie ID</td><td><input type="text" name="movie_id" size="80" onChange={this.handleInputChange} /></td></tr>
 */

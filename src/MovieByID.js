@@ -34,6 +34,13 @@ export class MovieByID extends Component {
         })
     }
     render() {
+        const newTo = { 
+            pathname: `/postreview`, 
+            param1: this.state.movie.movie_id,    // param1 -> movie_id
+            param2: this.state.movie.title,     // param2 -> title of the movie
+            param3: this.state.movie.img_source       
+          };
+
         return (
             
         <div height='100%'>
@@ -52,7 +59,7 @@ export class MovieByID extends Component {
                         
                     <p><h4> Summary: {this.state.movie.summary} </h4></p>
                 </div>        
-                <tr><td colSpan="2" align="center" color='white'><button class='form1' ><NavLink class='link' to="/postreview" ><b>Leave A Review</b></NavLink></button></td></tr> 
+                <tr><td colSpan="2" align="center" color='white'><button class='form1' ><Link class='link' to={newTo} ><b>Leave A Review</b></Link></button></td></tr> 
             </div>
             <div>
                 <center>
@@ -81,3 +88,8 @@ export class MovieByID extends Component {
 
 export default MovieByID
 
+/*
+                <tr><td colSpan="2" align="center" color='white'><button class='form1' ><NavLink class='link' to= {`/postreview/${this.state.movie.movie_id}`} ><b>Leave A Review</b></NavLink></button></td></tr> 
+*/
+
+/*<NavLink class='link' to={ pathname : `/postreview`, aboutProps:{name : 'some data' } }> */
