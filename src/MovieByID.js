@@ -92,4 +92,3 @@ export default MovieByID
                 <tr><td colSpan="2" align="center" color='white'><button class='form1' ><NavLink class='link' to= {`/postreview/${this.state.movie.movie_id}`} ><b>Leave A Review</b></NavLink></button></td></tr> 
 */
 
-/*<NavLink class='link' to={ pathname : `/postreview`, aboutProps:{name : 'some data' } }> */
