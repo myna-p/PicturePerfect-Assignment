@@ -1,13 +1,15 @@
 import React, { Component } from "react"; 
 import axios from 'axios';
+import BeautyStars from 'beauty-stars';
+
 class PostReview extends Component {
 
-    //To Do: Automate the 'user_id' after implementing login functionality 
+    //To Do: automate 'user_id' after implementing login functionality 
     constructor(props) {
         super(props)
 
         this.state = {
-            review_id: '', movie_id: this.props.location.param1 , user_id: '1', review_date: '' ,rating :'', content: '', rows: ['']
+           value:'', review_id: '', movie_id: this.props.location.param1 , user_id: '1', review_date: '' ,rating :'', content: '', rows: ['']
         }
         console.log("about",props.location.aboutProps )
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +32,7 @@ class PostReview extends Component {
             movie_id: parseInt(this.state.movie_id),
             user_id: parseInt(this.state.user_id),
             review_date: this.state.review_date,
-            rating: parseInt(this.state.rating),
+            rating: parseInt(this.state.value),
             content: this.state.content
 
         })
@@ -44,6 +46,7 @@ class PostReview extends Component {
 
     
     componentDidMount() {
+
         //Setting the review_date state variable to the current system date
         var that = this;
         var date = new Date().getDate(); //Current Date
@@ -58,6 +61,7 @@ class PostReview extends Component {
         review_date:
         year + '-' + month + '-' + date + ' ' + hours + ':' + min + ':' + sec, 
 
+       // movie_id: this.$params.movieId,
         });
       }
   render() {
@@ -66,15 +70,29 @@ class PostReview extends Component {
         <h1>Submit Review</h1>
         <h3>Movie Title: {this.props.location.param2}</h3>
         <form onSubmit={this.handleSubmit}>
-            <img src={this.props.location.param3} class='lists' />
-                    <table width="50%">
+          
+        <div class='wrap'>
+            <div class="revleft" align='center' height='100%'>
+                <img src={this.props.location.param3} class='lists' />
+            </div>
+            <div class="revright">
+            
+                    <table width="80%">
                         <tbody>  
-                        
-                        <tr><td>Rating</td><td><input type="text" name="rating" size="80" onChange={this.handleInputChange} /></td></tr>
-                        <tr><td>Comments</td><td><textarea rows="4"  type="text" name="content" size="80" height="100" onChange={this.handleInputChange} /></td></tr>
+                        <tr> <td><b>Rating:</b></td> <td>
+                        <BeautyStars
+                          value={this.state.value}
+                          onChange={value => this.setState({ value })}
+                          inactiveColor='rgb(185, 185, 180)'
+                          
+                        /></td>
+                        </tr>
+                        <tr><td><b>Comments</b></td><td><textarea rows="4"  type="text" name="content" size="80" height="100" onChange={this.handleInputChange} /></td></tr>
                         <tr><td colSpan="2" align="center"><button class='form1' type="submit">Add Review</button></td></tr>
                         </tbody>
                     </table>
+        </div>
+        </div>
         </form>
        </div>
     );
@@ -86,4 +104,10 @@ export default PostReview;
 /*Add User ID to each of the reviews after implementing login
 <tr><td>user_id</td><td><input type="text" name="user_id" size="80"  onChange={this.handleInputChange} /></td></tr>
 <tr><td>Movie ID</td><td><input type="text" name="movie_id" size="80" onChange={this.handleInputChange} /></td></tr>
+
+
+____________________________RATING ______________________________
+<tr><td><b>Rating</b></td><td><input type="number" min="0" max="5" name="rating" size="80" onChange={this.handleInputChange} /></td></tr>
+
 */
+
