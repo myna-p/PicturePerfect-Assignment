@@ -1,0 +1,176 @@
+body {
+  background-color: rgb(238, 237, 231);
+  padding: 20px;
+  margin: 0;
+}
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: rgb(8, 11, 70);
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #FFF;
+  float:right;
+  width:83%;
+  padding:1%;
+
+}
+.listmovie {
+  background-color: #FFF;
+  align-content: center;
+  width:85%;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.active {
+  background-color: rgb(40, 40, 136);
+}
+.navbar{
+  margin:0px auto;
+  height: 20% !important;
+  background-color: rgb(8, 11, 70);
+}
+.glyphicon glyphicon-log-in{
+  color: beige;
+}
+.navbar-header li{
+  width: 130%;
+}
+.carousel .thumb img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.carousel .slide img {
+  max-height: 210px;  /* change this to whatever you want */
+  width: auto;
+}
+.component-responsive-image img {
+  padding: 1em;
+  width: 100%;
+}
+img.lists {
+  border: 1px solid rgb(214, 211, 211);
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+  height: 270px;
+  margin-right: 60px;
+  margin-top: 3%;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.253);
+}
+
+.poster{
+  height: 60% !important;
+  width:60%;
+  border: 1px solid rgb(214, 211, 211);
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0);
+}
+.wrap {
+  width: 100%;
+  overflow:auto;
+  height: 100%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+  
+  .fleft {
+      padding-top: 3%;
+      float:left; 
+      width: 50%;
+      height: 100%;
+      padding-bottom: 3%;
+  }
+  
+  .fright {
+    padding-top: 10%;
+      float: right;
+      height: 100%;
+      width: 50%;
+  }
+
+.sidenav-left{
+  float:left; 
+  width: 15%;
+  
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  padding:3% ;
+  padding-left: 1% !important;
+}
+td{
+  margin-bottom: 3%;
+  align-content: center;
+}
+.titles{
+  color: rgb(40, 40, 136);
+}
+input,textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button.form1 {
+  width: 100%;
+  background-color: rgb(40, 40, 136);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit].form1:hover {
+  background-color: rgb(8, 11, 70);
+}
+.link {
+  color: #FFF;
+}
+.link:hover {
+   color: rgb(255, 255, 255);
+}
+.revleft {
+  padding-top: 3%;
+  padding-left: 3%;
+  float:left; 
+  width: 30%;
+  height: 100%;
+  align-content: center;
+  padding-bottom: 5%;
+}
+
+.revright {
+padding-top: 6%;
+  float: right;
+  height: 100%;
+  width: 70%;
+}
