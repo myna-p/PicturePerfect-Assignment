@@ -9,7 +9,6 @@ import Stuff from "./Stuff";
 import Contact from "./Contact";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-
 import MovieByID from "./MovieByID";
 import PostReview from "./PostReview";
 
@@ -28,19 +27,21 @@ class Main extends Component {
         <ul className="header">
         <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/stuff">Movies</NavLink></li>
-            <li><NavLink to="/home">TV Shows</NavLink></li>
+            
             <li><NavLink to="/contact">Book Tickets</NavLink></li>
         </ul>
         </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
+        <form class="navbar-form navbar-left" action="/action_page.php" autocomplete="off">
             <div class="form-group">
             <input type="text" class="form-control" placeholder="Search Movies, Shows..." name="search"  />
             </div>
             <button type="submit" class="btn btn-default">Go!</button>
         </form>
-        <ul class="nav navbar-nav">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
+        
+        
         </div>
       </nav> 
       <div align="center" height="50%">

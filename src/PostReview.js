@@ -69,7 +69,7 @@ class PostReview extends Component {
       <div  align='center' >
         <h1>Submit Review</h1>
         <h3>Title: {this.props.location.param2}</h3>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} autocomplete="off">
           
         <div class='wrap'>
             <div class="revleft" align='center' height='100%'>
