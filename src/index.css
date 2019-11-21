@@ -128,7 +128,11 @@ td{
 .titles{
   color: rgb(40, 40, 136);
 }
+<<<<<<< HEAD
 input,textarea, select {
+=======
+input[type=text],textarea, select {
+>>>>>>> 05005930d09261428ad888180b230f0bf3e5b93b
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -157,6 +161,7 @@ button[type=submit].form1:hover {
 }
 .link:hover {
    color: rgb(255, 255, 255);
+<<<<<<< HEAD
 }
 .revleft {
   padding-top: 3%;
@@ -179,3 +184,6 @@ padding-top: 6%;
   width: 400px !important;
   margin-left: 30px;
 }
+=======
+}
+>>>>>>> 05005930d09261428ad888180b230f0bf3e5b93b

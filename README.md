@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# PicturePerfect-Assignment
+Clumio Intern Assignment 
+
+# Frontend - ReactJS
+
+ 1. cd foldername
+
+ 2. npm start
+
+# Backend - Go
+  
+ go run /path/to/goserver-trial.go
+>>>>>>> 05005930d09261428ad888180b230f0bf3e5b93b
